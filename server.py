@@ -2,6 +2,7 @@ from tornado import web, ioloop
 #import components.fibo
 import server.fibo
 
+
 class MainHandler(web.RequestHandler):
     def get(self):
         self.render("index.html")
@@ -9,8 +10,9 @@ class MainHandler(web.RequestHandler):
 app = web.Application([
     (r"/", MainHandler),
     (r"/main/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final"}),
-    (r"/fibo/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final/components/fibo"}),
-    (r"/app/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final/components/main"}),
+    (r"/components/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final/components"}),
+    #(r"/fibo/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final/components/fibo"}),
+    #(r"/app/(.*)", web.StaticFileHandler, {"path": "/home/miguel/development/brython/final/components/main"}),
 ])
 
 

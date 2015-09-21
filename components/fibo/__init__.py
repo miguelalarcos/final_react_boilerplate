@@ -1,2 +1,2 @@
 print('fibo')
-import fibor
+import components.fibo.fibor
