@@ -1,0 +1,2 @@
+print('fibo')
+import fibor
